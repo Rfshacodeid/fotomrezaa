@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 disconnect</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Link CSS Leaflet.js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <!-- Link Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Website edukasi</h1>
+
+        <!-- Disclaimer -->
+<p class="disclaimer" style="margin-bottom: 100px;">
+    📢 <strong>Selamat! Anda adalah orang yang berpotensi... berpotensi terkena serangan cyber yaitu phishing!</strong> 😱🔓  
+</p>
+
+<p>
+    Tenang, untuk saat ini gue <strong>GAK</strong> akan ngambil data kalian. Ini cuma <strong>simulasi edukasi</strong> biar lu lebih paham cara kerja website phishing kayak gini. Tapi di luar sana, banyak yang beneran niat jahat! 😬  
+</p>
+
+<p>
+    ⚠️ <strong>Jangan gampang percaya sama website atau aplikasi yang nawarin kuota gratis, saldo gratis, atau hadiah-hadiah lainnya!</strong> Bisa jadi itu trik buat nyuri data lu!  
+</p>
+
+<p><strong>💡 Tips biar gak ketipu:</strong></p>
+<ul>
+    <li>✅ <strong>Cek URL-nya dulu</strong> – kalau aneh atau gak resmi, langsung cabut!</li>
+    <li>✅ <strong>Jangan masukin data pribadi</strong> – kayak email, password, atau nomor HP sembarangan.</li>
+    <li>✅ <strong>Aktifin keamanan tambahan</strong> – misalnya autentikasi dua langkah biar akun lu makin aman.</li>
+    <li>✅ <strong>Jangan asal klik link mencurigakan</strong> – apalagi kalau dikirim dari nomor atau email gak dikenal.</li>
+    <li>✅ <strong>Jangan nyalakan izin kalau gak perlu!</strong> – Kalau ada website atau aplikasi yang minta akses kamera, mikrofon, atau lokasi tanpa alasan jelas, <strong>jangan izinkan!</strong> Bisa jadi itu cara mereka buat nyadap data lu.</li>
+</ul>
+
+<p>
+    🌍 <strong>Internet itu luas, tapi juga penuh jebakan! Jangan sampai jadi korban beneran!</strong> Tetap waspada dan jaga data pribadi lu! 🔒😉  
+</p>
+
+
+       <!-- Text berjalan -->
+       <div class="marquee" style="margin: 90px 0;">
+        <span>© 2025 ʀᴀꜰᴀꜱʜᴀ ᴀʟꜰɪᴀɴᴅɪ <<<⚠️ Hati-hati dengan website phishing! Jangan sembarangan memasukkan data atau Informasi pribadi! 🚨<<<<<</span>
+    </div>
+    
+
+        <p style="margin-top: 100px;">Click the button to get your current location:</p>
+
+        <!-- Buttons for location, camera, weather, dark mode, and custom marker -->
+        <button onclick="getLocation()">📍 Dapatkan Lokasi</button>
+        <button onclick="openCamera()">📸 Buka Kamera</button>
+        <button onclick="addCustomMarker()">🗺️ Tambah Penanda di Peta</button>
+        <button id="darkModeToggle" onclick="toggleDarkMode()">🌙 Switch to Dark Mode</button>
+
+       
+        <!-- Display for Weather Information -->
+        <p id="weather" style="font-weight: bold;"></p>
+
+        <!-- Map and Status Display -->
+        <div id="map-container" style="display: none;">
+            <div id="map"></div>
+            <p id="status"></p>
+            <p id="address" style="font-weight: bold;"></p>
+        </div>
+
+        <!-- Location History -->
+        <h3>Riwayat Lokasi</h3>
+        <ul id="location-history"></ul>
+
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" style="display: none;">
+            <i class="fas fa-spinner fa-spin"></i> Loading...
+        </div>
+
+        <!-- Camera Elements for Capturing Photo -->
+        <div>
+            <video id="camera" autoplay playsinline></video>
+            <canvas id="canvas" style="display:none;"></canvas>
+            <br>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 Pratama
+            <br><br>
+            <!-- Social Media Icons -->
+            <a href="https://www.instagram.com/rfashacode.id" target="_blank" class="icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/dimss_aa" target="_blank" class="icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/@dimaspratama5411" target="_blank" class="icon">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://T.me/dmas32" target="_blank" class="icon">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://github.com/Pratama23-byte" target="_blank" class="icon">
+                <i class="fab fa-github"></i>
+                </a>
+            </div>            
+    </div>
+
+    <!-- Link JavaScript Leaflet.js -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

